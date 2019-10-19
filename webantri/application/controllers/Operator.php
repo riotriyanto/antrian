@@ -9,9 +9,7 @@ class Operator extends CI_Controller {
 		}elseif($this->session->userdata('level') != 3){
 			redirect('rtlogin');
 		}
-		// $data['api'] = "http://103.100.27.19/api_antrian/";
-		$data['api'] = $this->config->base_url();
-		$data['api'] = substr($data['api'], 0, 33);
+		return $this->config->item('api');
 		
 		$this->load->view('op/op', $data);
 	}

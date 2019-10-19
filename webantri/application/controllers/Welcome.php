@@ -18,11 +18,19 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function api($value='')
+  	{
+  // 		$data['api'] = $this->config->base_url();
+		// $data['api'] = substr($data['api'], 0, 33);
+		// return $this->api_c();
+		return $this->config->item('api');
+  	}
 	public function index()
 	{
 		// $data['api'] = "http://103.100.27.19/api_antrian/";
-		$data['api'] = $this->config->base_url();
-		$data['api'] = substr($data['api'], 0, 33);
+		// $data['api'] = $this->config->base_url();
+		// $data['api'] = substr($data['api'], 0, 33);
+		$data['api'] = $this->api();
 		$this->load->view('client/index', $data);
 	}
 	public function prosesPilihLayanan($value='')
@@ -41,19 +49,13 @@ class Welcome extends CI_Controller {
 	}
 	public function isidata($value='')
 	{
-		// echo"test";
-		// echo $this->input->post('id_layanan').", ".$this->input->post('jenis_layanan');
-		// $data['api'] = "http://103.100.27.19/api_antrian/";
-		// $data['api'] = "http://103.100.27.19/api_antrian/";
-		$data['api'] = $this->config->base_url();
-		$data['api'] = substr($data['api'], 0, 33);
+		$data['api'] = $this->api();
 		$this->load->view('client/form', $data);
 	}
 	public function ambilAntrian($value='')
 	{
 		// $data['api'] = "http://103.100.27.19/api_antrian/";
-		$data['api'] = $this->config->base_url();
-		$data['api'] = substr($data['api'], 0, 33);
+		$data['api'] = $this->api();
 		$data = array(
 				'id_layanan' => $this->input->post('id_layanan'),
 				'nik' => $this->input->post('NIK'),
@@ -66,8 +68,7 @@ class Welcome extends CI_Controller {
 	public function panggil($value='')
 	{
 		// $data['api'] = "http://103.100.27.19/api_antrian/";
-		$data['api'] = $this->config->base_url();
-		$data['api'] = substr($data['api'], 0, 33);
+		$data['api'] = $this->api();
 		$this->load->view('client/panggil',$data);
 	}
 }

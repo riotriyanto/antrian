@@ -8,8 +8,7 @@ class Login extends CI_Controller {
   	}
   	public function url_api($value='')
   	{
-  		$data['api'] = $this->config->base_url();
-		$data['api'] = substr($data['api'], 0, 33);
+  		return $this->config->item('api');
 		return $data['api'];
   	}
 	public function index($value='')

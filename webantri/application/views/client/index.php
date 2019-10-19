@@ -52,7 +52,7 @@
 		namaApp();
 		function namaApp() {
 			$.ajax({
-				url : "http://103.100.27.19/api_antrian/admin/get_nama_aplikasi.php",
+				url : "<?=$api ?>admin/get_nama_aplikasi.php",
 				dataType : 'json',
 				data : {},
 				type : "post",

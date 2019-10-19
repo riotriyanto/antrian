@@ -11,9 +11,7 @@ class Admin extends CI_Controller {
     }
 	public function api($value='')
   	{
-  		$data['api'] = $this->config->base_url();
-		$data['api'] = substr($data['api'], 0, 33);
-		return $data['api'];
+  		return $this->config->item('api');
   	}
 	public function index($value='')
 	{
