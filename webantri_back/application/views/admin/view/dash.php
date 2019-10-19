@@ -1,0 +1,1 @@
+<?php echo "Selamat datang, ".$this->session->userdata('nama'); ?>
