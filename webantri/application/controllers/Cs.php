@@ -109,7 +109,7 @@ class Cs extends CI_Controller {
 		$data['api'] = $this->api();
 		$this->load->view('cs/layanan', $data);
 	}
-	public function ptransaksi($value='')
+	public function ptransaksi()
 	{
 		echo $this->input->post('id_layanan');
 		$userdat = array(
