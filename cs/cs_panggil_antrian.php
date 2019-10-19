@@ -61,7 +61,8 @@ date_default_timezone_set("Asia/Jakarta");
                       'narasi'=>$narasi
                   );
               $nomor_antrian = $data['kode_layanan'].$data2['nomor_antrian'];
-
+              $q = ("INSERT INTO narator (status, nomor_antrian, loket, narasi) VALUES ('pending','$nomor_antrian','$data3[nomor_loket]', '$narasi') ");
+              // die($q);
                 $sql_narasi = mysqli_query($koneksi, "INSERT INTO narator (status, nomor_antrian, loket, narasi) VALUES ('pending','$nomor_antrian','$data3[nomor_loket]', '$narasi') ");   
             }else{
               $respon = array('status' => 0, 'pesan'=> 'Antrian kosong' );
