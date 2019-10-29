@@ -42,9 +42,6 @@
           </div><br>
           <div class="form-group">
             <input style="border-left:none;border-top:none;border-right:none;" type="text" name="nama" id="nama" placeholder="Nama" class="form-control ak-input" required>
-            <!-- <input id="text" type="text" placeholder=" Enter something..."> -->
-            <!-- keyboard -->
-            <!-- end keyboard -->
           </div><br>
           <div class="form-group">
             <input style="border-left:none;border-top:none;border-right:none;" type="text" name="no_telp" id="no_telp" placeholder="No. Telepon" class="form-control">

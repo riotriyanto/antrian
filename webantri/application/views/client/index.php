@@ -17,6 +17,21 @@
         	font-size: 60px;
         	color: #009C9F;
         }
+        @media only screen and (max-width: 767px) {
+		  .logo {
+		    position: relative;
+		    margin-left: 34%;
+		    margin-right: 5%;
+		  }
+		  .logo2 {
+		    position: relative;
+		    margin: 0px;
+		    margin-left: 5%;
+		  }
+		  .float-button-wrapper{
+		  	display: none;
+		  }
+		}
     </style>
 </head>
 <body>
