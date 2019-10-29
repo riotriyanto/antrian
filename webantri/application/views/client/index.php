@@ -17,19 +17,33 @@
         	font-size: 60px;
         	color: #009C9F;
         }
-        @media only screen and (max-width: 767px) {
+        @media only screen and (max-width: 991px) {
 		  .logo {
 		    position: relative;
-		    margin-left: 34%;
-		    margin-right: 5%;
+		    width: 100px;
+		    margin-right: 10px;
+		    margin-left: -15%
 		  }
 		  .logo2 {
-		    position: relative;
-		    margin: 0px;
-		    margin-left: 5%;
+		    position: relative;		    
+		    width: 130px;
+		    margin-top: -3%;	
 		  }
 		  .float-button-wrapper{
 		  	display: none;
+		  }
+		}
+		@media only screen and (max-width: 767px) {
+			.logo {
+		    position: relative;
+		    width: 100px;
+		    margin-right: 10%;
+		    margin-left: 25%;
+		  }
+		  .logo2 {
+		    position: relative;	
+		    margin-top: -3%;	    
+		    width: 130px;
 		  }
 		}
     </style>
@@ -104,7 +118,7 @@
 	        		var antrian_terlayani = 'antrian_terlayani'+i;
 	        		var antrian_belum_terlayani = 'antrian_belum_terlayani'+i;
 	        		var jumlah_antrian = 'jumlah_antrian'+i;
-	        		html_layanan += "<div class='col-md-4' style='line-height:1'>"+
+	        		html_layanan += "<div class='col-lg-4' style='line-height:1'>"+
 	        						"<form action='<?php echo base_url() ?>prosesPilihLayanan' method='POST'>"+
 	        						"<input type='hidden' name='id_layanan' value='"+data[i].id_layanan+"'>"+
 	        						"<input type='hidden' name='jenis_layanan' value='"+data[i].jenis_layanan+"'>"+
