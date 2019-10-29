@@ -31,7 +31,7 @@ $config['api'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "htt
 $config['api'] .= "://".$_SERVER['HTTP_HOST'];
 
 //folder
-$config['api'] .= ":/antrian/";
+$config['api'] .= "/public_html/";
 
 
 /*

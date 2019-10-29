@@ -1,10 +1,12 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "klaten@!?";
-$dbname = "antrian";
+include '../koneksi.php';
+$conn = $koneksi;
+// $servername = "localhost";
+// $username = "root";
+// $password = "klaten@!?";
+// $dbname = "antrian";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+// $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

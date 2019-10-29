@@ -1,11 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "klaten@!?";
-$dbname = "antrian";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
+include '../koneksi.php';
+$conn = $koneksi;
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
