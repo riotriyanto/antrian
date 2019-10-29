@@ -19,6 +19,16 @@
   <!--   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap4.0.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Isi Data</title>
+    <style type="text/css">
+      @media only screen and (max-width: 991px) {
+        #gambar{
+          display: none;
+        }
+        #layanan{
+          position: relative;
+        }
+      }
+    </style>
   </head>
   <body>
     <br>
@@ -30,7 +40,7 @@
       <p style="float: right;margin-top: 80px; background-color:#F9F9F9 " class="col-md-7" id="isi_syarat"></p>
     </div> -->
     <div class="row" style="position: relative;">
-      <div class="col-md-5" style="padding-left: 5%;position: fixed;">
+      <div id="layanan" class="col-md-5" style="padding-left: 5%;position: fixed;">
         <font>Anda memilih layanan</font>
         <h3><?php echo $this->session->userdata('nama_layanan') ?></h3><br><br><br><br>
         <!-- <form action="ambil_antrian.php" method="POST"> -->
